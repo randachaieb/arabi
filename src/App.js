@@ -1,32 +1,24 @@
-
+import React from 'react';
 import './App.css';
 import './style.css';
-import myImage from './steveJobs.jpg';
 
+import ProfilePhoto from './Component/Profile/ProfilePhoto';
+import FullName from './Component/Profile/FullName';
+import Address from './Component/Profile/Address';
 
-function App() {
+class App extends React.Component {
+  render(){
   return (
 
-    <div className="App" >
+    <div>
       
-      <div  style={{border:"solid 1px black",maxWidth:"100vw"}}>
-
-        <h1 className="titleRed">Randa Chaieb</h1>
-        <br />
-        <img src={myImage} alt='imageInSrc' />
-        <br />
-        <img src="/quote.jpg" alt="imageInPublic"  />  
-
-      </div>
-
-      <video style ={{width:"320", height:"240", controls}}>
-
-      <source src={"myVideo.mp4"} type={"video/mp4"} />
-
-      </video>
+      <ProfilePhoto />
+      <FullName />
+      <Address/>
       
     </div>
   );
+}
 }
 
 export default App;
